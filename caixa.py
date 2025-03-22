@@ -1,14 +1,14 @@
 saldod= [250]
-usuario=str(input("ola,digite seu nome:"))
+usuario=str(input("Ola,digite seu nome:"))
 sacado=[0]
 depositado=[0]
 
 def deposit(saldod, depositado):
-    depositar= input('valor de deposito:')
+    depositar= input('Valor de deposito:')
     if not depositar.isnumeric():
         print("Por favor, digite apenas números!")
     elif float(depositar) <= 0:
-        print('sorry,insira um valor positivo para depositar ')
+        print('Sorry,insira um valor positivo para depositar ')
 
     elif depositar.isnumeric():
         depositado[0] = float(depositar)
@@ -18,13 +18,13 @@ def deposit(saldod, depositado):
     
 
 def saque(saldod,sacado):
-    sacar= input('valor do saque:')
+    sacar= input('Valor do saque:')
     if not sacar.isnumeric():
         print("Por favor, digite apenas números!")
     elif float(sacar)<= 0:
-        print('porfavor insira um valor positivo para saque')
+        print('Porfavor insira um valor positivo para saque')
     elif float(sacar) > saldod[0]:
-        print('isso e maior que seu saldo, nao foi possivel sacar,pobre')
+        print('Isso e maior que seu saldo, nao foi possivel sacar,pobre')
     elif sacar.isnumeric():
         sacado[0] = float(sacar)
         saldod[0]-= sacado[0]
@@ -33,16 +33,16 @@ def saque(saldod,sacado):
     
     
 def consulta(saldod):
-    print(' seu saldo e {} na conta corrente'.format(saldod[0]))
+    print(' Seu saldo e {} na conta corrente'.format(saldod[0]))
 
 def extrato(sacar,depositar):
-    print('seu extrato...\nvalor sacado{}\n valor depositado{}'.format(sacado,depositado))
+    print('Seu extrato...\nvalor sacado{}\n valor depositado{}'.format(sacado,depositado))
 
 
 def menu():
-    print('seja bem vindo {} oque voce deseja realizar?'.format(usuario))
+    print('Seja bem vindo {} oque voce deseja realizar?'.format(usuario))
     global saldod
-    r = int(input('digite 1 para consultar seu saldo;\ndigite 2 para depositar;\ndigite 3 para sacar;\n digite 4 para ver extrato\ninsira:'))
+    r = int(input('Digite 1 para consultar seu saldo;\ndigite 2 para depositar;\ndigite 3 para sacar;\n digite 4 para ver extrato\ninsira:'))
     if r==1:
         consulta(saldod)
         
@@ -60,8 +60,10 @@ def menu():
         
     
     else:
-        print('opcao inexistente, escolha as opcoes')
+        print('Opção inexistente, escolha as opcoes')
 
     menu()
 
 menu()
+
+
