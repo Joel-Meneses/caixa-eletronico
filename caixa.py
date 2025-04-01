@@ -1,7 +1,9 @@
 saldod= [250]
 usuario=str(input("Ola,digite seu nome:"))
+senha=(input('digite sua senha'))
 sacado=[0]
 depositado=[0]
+
 
 def deposit(saldod, depositado):
     depositar= input('Valor de deposito:')
@@ -40,7 +42,7 @@ def extrato(sacar,depositar):
 
 
 def menu():
-    print('Seja bem vindo {} oque voce deseja realizar?'.format(usuario))
+    print(' Seja bem vindo {} qual operação deseja realizar?'.format(usuario))
     global saldod
     r = int(input('Digite 1 para consultar seu saldo;\ndigite 2 para depositar;\ndigite 3 para sacar;\n digite 4 para ver extrato\ninsira:'))
     if r==1:
